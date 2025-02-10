@@ -19,7 +19,11 @@
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger
  */
 function isInteger(value) {
-  // Implementation goes here.
+  if (Number.isInteger(value)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -30,7 +34,11 @@ function isInteger(value) {
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND
  */
 function logicalAnd(a, b) {
-  // Implementation goes here.
+  if (a && b == true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -41,7 +49,11 @@ function logicalAnd(a, b) {
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR
  */
 function logicalOr(a, b) {
-  // Implementation goes here.
+  if (a || b == true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -51,7 +63,11 @@ function logicalOr(a, b) {
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT
  */
 function invertBoolean(bool) {
-  // Implementation goes here.
+  if (bool != true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -61,7 +77,13 @@ function invertBoolean(bool) {
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while
  */
 function countDigits(num) {
-  // Implementation goes here.
+  let count = 0;
+
+  do {
+    count++
+    num = Math.floor(num / 10);
+  } while (num > 0);
+  return count;
 }
 
 /**
@@ -71,7 +93,14 @@ function countDigits(num) {
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while
  */
 function sumOfDigits(num) {
-  // Implementation goes here.
+  let sum = 0;
+
+  while (num > 0) {
+    sum += num % 10; // Suma el último dígito
+    num = Math.floor(num / 10); // Elimina el último dígito
+  }
+
+  return sum;
 }
 
 /**
@@ -81,7 +110,12 @@ function sumOfDigits(num) {
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while
  */
 function reverseNumber(num) {
-  // Implementation goes here.
+  let reversed = 0;
+  while (num > 0) {
+    reversed = reversed * 10 + (num % 10);
+    num = Math.floor(num / 10);
+  }
+  return reversed
 }
 
 /**
@@ -93,7 +127,15 @@ function reverseNumber(num) {
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else
  */
 function isWithinRange(num, min, max) {
-  // Implementation goes here.
+  if (num < min) {
+    return false;
+  } else {
+    if (num > max) {
+      return false;
+    } else {
+      return true;
+    }
+  }
 }
 
 // Export functions

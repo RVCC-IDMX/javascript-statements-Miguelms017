@@ -19,7 +19,11 @@
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
  */
 function isString(str) {
-  // Implementation goes here.
+  if (typeof str == "string") {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -29,7 +33,11 @@ function isString(str) {
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality
  */
 function isBlank(str) {
-  // Implementation goes here.
+  if (str === "") {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -42,7 +50,11 @@ function isBlank(str) {
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition
  */
 function sayHelloOrBye(name, num) {
-  // Implementation goes here.
+  if (num === 0) {
+    return "Hello " + name;
+  } else {
+    return "Bye " + name;
+  }
 }
 
 /**
@@ -53,7 +65,11 @@ function sayHelloOrBye(name, num) {
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality
  */
 function compareStrings(str1, str2) {
-  // Implementation goes here.
+  if (str1 === str2) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /* -------------------------------------------
@@ -67,7 +83,12 @@ function compareStrings(str1, str2) {
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
  */
 function isUpperCase(str) {
-  // Implementation goes here.
+  let upper = str.toUpperCase();
+  if (str === upper) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -77,7 +98,12 @@ function isUpperCase(str) {
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
  */
 function isLowerCase(str) {
-  // Implementation goes here.
+  let lower = str.toLowerCase();
+  if (str === lower) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -88,7 +114,12 @@ function isLowerCase(str) {
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length
  */
 function hasLength(str, length) {
-  // Implementation goes here.
+  let strlength = str.length;
+  if (strlength === length) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -99,7 +130,11 @@ function hasLength(str, length) {
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith
  */
 function startsWithSubstring(str, prefix) {
-  // Implementation goes here.
+  if (str.startsWith(prefix)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -110,7 +145,11 @@ function startsWithSubstring(str, prefix) {
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith
  */
 function endsWithSubstring(str, suffix) {
-  // Implementation goes here.
+  if (str.endsWith(suffix)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -121,7 +160,11 @@ function endsWithSubstring(str, suffix) {
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
  */
 function containsSubstring(str, substring) {
-  // Implementation goes here.
+  if (str.includes(substring)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -130,7 +173,11 @@ function containsSubstring(str, substring) {
  * @returns {boolean} - True if str contains only letters.
  */
 function isAlpha(str) {
-  // Implementation goes here.
+  if (/^[A-Za-z]+$/.test(str)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -139,7 +186,11 @@ function isAlpha(str) {
  * @returns {boolean} - True if str contains only digits.
  */
 function containsOnlyDigits(str) {
-  // Implementation goes here.
+  if (/^[0-9]+$/.test(str)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -149,7 +200,12 @@ function containsOnlyDigits(str) {
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
  */
 function isEmptyOrWhitespace(str) {
-  // Implementation goes here.
+  let strtrim = str.trim();
+  if (strtrim === "") {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // DO NOT EDIT THE FOLLOWING EXPORT STATEMENT.
